@@ -4,7 +4,16 @@
 
 🎓 You are free to use these code examples for educational or work purposes. Please credit all book and supplementary material authors if you use their code examples, figures, pictures or citations.
 
-## Guide
+## Table of Contents
+
+- [Large Language Models at Work: Enhancing Software Systems with Language Models](#large-language-models-at-work-enhancing-software-systems-with-language-models)
+- [AutoGEN with Ollama](#autogen-with-ollama)
+
+## Large Language Models at Work: Enhancing Software Systems with Language Models
+
+This is an awesome book on developing applications based on LLMs. This book covers many development topics and usage cases. Most of the code examples are provided in the next sections.
+
+[Large Language Models at Work: Enhancing Software Systems with Language Models by Vlad Rișcuția](https://vladris.com/llm-book)
 
 Before using these code examples please create `.env` file inside each folder. For these examples I use OpenAI APIs and ChatGPT models.
 
@@ -12,12 +21,6 @@ Before using these code examples please create `.env` file inside each folder. F
 OPENAI_API_KEY=<YOUR_KEY>
 OPENAI_ORG_ID=<YOUR_ORG_ID>
 ```
-
-## Large Language Models at Work: Enhancing Software Systems with Language Models by Vlad Rișcuția
-
-This is an awesome book on developing applications based on LLMs. This book covers many development topics and usage cases. Most of the code examples are provided in the next sections.
-
-[Large Language Models at Work: Enhancing Software Systems with Language Models by Vlad Rișcuția](https://vladris.com/llm-book)
 
 ### A Few Words About Prompts
 
@@ -128,7 +131,7 @@ Large language models have content policies to restrict users from asking about 
 
 The *AutoGEN* is an open-source programming framework for agentic AI. It implements all necessary approaches and tools for easy implementation of AI agents based on various LLMs. 
 
-Ollama is an open-source tool for running LLM models locally. Ollama model library contains many modern LLM models including Llama3, Phi3, StarCoder and others. Models are running locally without the need of external connections.
+*Ollama* is an open-source tool for running LLM models locally. Ollama model library contains many modern LLM models including Llama3, Phi3, StarCoder and others. Models are running locally without the need of external connections.
 
 ### Basic Prompt Execution
 
