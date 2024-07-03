@@ -123,3 +123,27 @@ In a large language model-based solution, a prompt is dynamically constructed fr
 Large language models have content policies to restrict users from asking about illegal or harmful topics Jailbreaking is a type of prompt injection that attempts to bypass these content policies, causing the model to generate disallowed output.
 
 [Jailbreaking Code Examples](/llm-book-examples/16-jailbreaking/)
+
+## AutoGEN with Ollama
+
+The *AutoGEN* is an open-source programming framework for agentic AI. It implements all necessary approaches and tools for easy implementation of AI agents based on various LLMs. 
+
+Ollama is an open-source tool for running LLM models locally. Ollama model library contains many modern LLM models including Llama3, Phi3, StarCoder and others. Models are running locally without the need of external connections.
+
+### Basic Prompt Execution
+
+This example implements one agent, executes one prompt and prints the result. Ollama is used as LLM model host.
+
+[Basic Prompt Execution Code Examples](/autogen-examples/0-basic-prompt-execution/)
+
+### Two Conversational Agents
+
+This example implements two conversational agents with a simple task - to provide an estimate for a simple Hello World microservice. 
+
+[Two Conversational Agents Code Examples](/autogen-examples/1-two-agents/)
+
+### Terminating Conversations Between Agents
+
+This code provides two examples how to terminate the chat between the agents by using `max_consecutive_auto_reply` and `is_termination_msg` properties.
+
+[Terminating Conversations Between Agents Code Examples](/autogen-examples/2-terminating-conversation/)
