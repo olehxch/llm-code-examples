@@ -1,5 +1,5 @@
-import os
 from autogen import ConversableAgent
+import pprint
 
 ollama_config = {
     'config_list': [
@@ -40,4 +40,14 @@ agent_dev = ConversableAgent(
 
 initial_message = 'Your task is to implement simple backend microservice that has one REST API endpoint that returns "Hello World" test message. The microservice should be implemented in Node.js using Express.js framework.'
 result = agent_pm.initiate_chat(
-    agent_dev, message=initial_message, max_turns=5)
+    agent_dev, message=initial_message, summary_method="reflection_with_llm", max_turns=5)
+
+print('DEFAULT_SUMMARY_PROMPT:')
+print(ConversableAgent.DEFAULT_SUMMARY_PROMPT)
+
+print('Summary:')
+print(result.summary)
+
+print('Chat history and cost:')
+pprint.pprint(result.chat_history)
+pprint.pprint(result.cost)

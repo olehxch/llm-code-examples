@@ -135,18 +135,12 @@ The *AutoGEN* is an open-source programming framework for agentic AI. It impleme
 
 ### A few notes about agent types
 
-> **ConversableAgent** is a class for generic conversable agents which can be configured as assistant or user proxy.
->
-> --- [Conversable Agent](https://microsoft.github.io/autogen/docs/reference/agentchat/conversable_agent/#conversableagent)
+> [**ConversableAgent**](https://microsoft.github.io/autogen/docs/reference/agentchat/conversable_agent/#conversableagent) is a class for generic conversable agents which can be configured as assistant or user proxy.
 
 
-> **UserProxyAgent** class is a subclass of ConversableAgent with human_input_mode=ALWAYS and llm_config=False – it always requests human input for every message and does not use LLM. It also comes with default description field for each of the human_input_mode setting. This class is a convenient short-cut for creating an agent that is intended to be used as a code executor.
->
-> --- [User Proxy Agent](https://microsoft.github.io/autogen/docs/tutorial/code-executors#user-proxy-agent)
+> [**UserProxyAgent**](https://microsoft.github.io/autogen/docs/tutorial/code-executors#user-proxy-agent) class is a subclass of ConversableAgent with human_input_mode=ALWAYS and llm_config=False – it always requests human input for every message and does not use LLM. It also comes with default description field for each of the human_input_mode setting. This class is a convenient short-cut for creating an agent that is intended to be used as a code executor.
 
-> **AssistantAgent** class is a subclass of ConversableAgent with human_input_mode=NEVER and code_execution_config=False – it never requests human input and does not use code executor. It also comes with default system_message and description fields. This class is a convenient short-cut for creating an agent that is intended to be used as a code writer and does not execute code.
->
-> --- [Assistant Agent](https://microsoft.github.io/autogen/docs/tutorial/code-executors#assistant-agent)
+> [**AssistantAgent**](https://microsoft.github.io/autogen/docs/tutorial/code-executors#assistant-agent) class is a subclass of ConversableAgent with human_input_mode=NEVER and code_execution_config=False – it never requests human input and does not use code executor. It also comes with default system_message and description fields. This class is a convenient short-cut for creating an agent that is intended to be used as a code writer and does not execute code.
 
 
 ### Basic Prompt Execution
@@ -201,9 +195,9 @@ Tools are pre-defined functions that agents use to perform specific actions like
 
 There are several [conversation patterns](https://microsoft.github.io/autogen/docs/tutorial/conversation-patterns#an-overview) for agents: 
 
-1. **Two-agent chat:** Simple interaction between two agents.
-2. **Sequential chat:** A series of chats between two agents, with summaries from previous chats carried over to the next.
-3. **Group chat:** Involving more than two agents, with strategies for selecting the next speaker such as round-robin, random, manual, and auto (agent decides). Custom functions can also determine the next speaker to create deterministic workflows.
-4. **Nested chat:** Embedding a workflow within a single agent for reuse in larger workflows.
+1. [**Two-agent chat:**](https://microsoft.github.io/autogen/docs/tutorial/conversation-patterns#two-agent-chat-and-chat-result) Simple interaction between two agents.
+2. [**Sequential chat:**](https://microsoft.github.io/autogen/docs/tutorial/conversation-patterns#sequential-chats) A series of chats between two agents, with summaries from previous chats carried over to the next.
+3. [**Group chat:**](https://microsoft.github.io/autogen/docs/tutorial/conversation-patterns#group-chat) Involving more than two agents, with strategies for selecting the next speaker such as round-robin, random, manual, and auto (agent decides). Custom functions can also determine the next speaker to create deterministic workflows.
+4. [**Nested chat:**](https://microsoft.github.io/autogen/docs/tutorial/conversation-patterns#nested-chats) Embedding a workflow within a single agent for reuse in larger workflows.
 
-[Conversation Patterns Code Examples](/autogen-examples/5-tool-use/)
+[Conversation Patterns Code Examples](/autogen-examples/6-conversation-patterns/)
