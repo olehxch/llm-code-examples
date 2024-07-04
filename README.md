@@ -186,3 +186,13 @@ A code executor processes input messages containing code, executes the code, and
 > The choice between command line and Jupyter code executor depends on the nature of the code blocks in agents’ conversation. If each code block is a “script” that does not use variables from previous code blocks, the command line code executor is a good choice. If some code blocks contain expensive computations (e.g., training a machine learning model and loading a large amount of data), and you want to keep the state in memory to avoid repeated computations, the Jupyter code executor is a better choice.
 >
 > --- [Command Line or Jupyter Code Executor?](https://microsoft.github.io/autogen/docs/tutorial/code-executors#command-line-or-jupyter-code-executor)
+
+### Tool Use
+
+Tools are pre-defined functions that agents use to perform specific actions like web searches, calculations, file reading, or API calls. By controlling the available tools, you can manage the actions an agent can execute.
+
+> Tool use is currently only available for LLMs that support OpenAI-compatible tool call API.
+>
+> --- [Tool Use Note](https://microsoft.github.io/autogen/docs/tutorial/tool-use)
+
+[Tool Use Code Examples](/autogen-examples/5-tool-use/)
