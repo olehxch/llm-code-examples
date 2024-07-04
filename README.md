@@ -150,3 +150,11 @@ This example implements two conversational agents with a simple task - to provid
 This code provides two examples how to terminate the chat between the agents by using `max_consecutive_auto_reply` and `is_termination_msg` properties.
 
 [Terminating Conversations Between Agents Code Examples](/autogen-examples/2-terminating-conversation/)
+
+### Human Input Modes
+
+Human input is a way of interacting with agents based on asking the human to enter the text in the terminal. These examples show how to use `human_input_mode` property with three values - `NEVER`, `TERMINATE` and `ALWAYS`. 
+
+In `NEVER` mode human input is never requested. Agents act fully autonomous. In `TERMINATE` mode human input is only requested when a termination condition is met. When human replies in this mode, `max_consecutive_auto_reply` counter is reset. In `ALWAYS` mode human input is always requested. In this mode `max_consecutive_auto_reply` is ignored.
+
+[Human Input Modes Code Examples](/autogen-examples/3-human-input/)
