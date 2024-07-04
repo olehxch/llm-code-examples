@@ -196,3 +196,14 @@ Tools are pre-defined functions that agents use to perform specific actions like
 > --- [Tool Use Note](https://microsoft.github.io/autogen/docs/tutorial/tool-use)
 
 [Tool Use Code Examples](/autogen-examples/5-tool-use/)
+
+### Conversation Patterns
+
+There are several [conversation patterns](https://microsoft.github.io/autogen/docs/tutorial/conversation-patterns#an-overview) for agents: 
+
+1. **Two-agent chat:** Simple interaction between two agents.
+2. **Sequential chat:** A series of chats between two agents, with summaries from previous chats carried over to the next.
+3. **Group chat:** Involving more than two agents, with strategies for selecting the next speaker such as round-robin, random, manual, and auto (agent decides). Custom functions can also determine the next speaker to create deterministic workflows.
+4. **Nested chat:** Embedding a workflow within a single agent for reuse in larger workflows.
+
+[Conversation Patterns Code Examples](/autogen-examples/5-tool-use/)
