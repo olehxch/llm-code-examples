@@ -133,6 +133,22 @@ The *AutoGEN* is an open-source programming framework for agentic AI. It impleme
 
 *Ollama* is an open-source tool for running LLM models locally. Ollama model library contains many modern LLM models including Llama3, Phi3, StarCoder and others. Models are running locally without the need of external connections.
 
+### A few notes about agent types
+
+> **ConversableAgent** is a class for generic conversable agents which can be configured as assistant or user proxy.
+>
+> --- [Conversable Agent](https://microsoft.github.io/autogen/docs/reference/agentchat/conversable_agent/#conversableagent)
+
+
+> **UserProxyAgent** class is a subclass of ConversableAgent with human_input_mode=ALWAYS and llm_config=False – it always requests human input for every message and does not use LLM. It also comes with default description field for each of the human_input_mode setting. This class is a convenient short-cut for creating an agent that is intended to be used as a code executor.
+>
+> --- [User Proxy Agent](https://microsoft.github.io/autogen/docs/tutorial/code-executors#user-proxy-agent)
+
+> **AssistantAgent** class is a subclass of ConversableAgent with human_input_mode=NEVER and code_execution_config=False – it never requests human input and does not use code executor. It also comes with default system_message and description fields. This class is a convenient short-cut for creating an agent that is intended to be used as a code writer and does not execute code.
+>
+> --- [Assistant Agent](https://microsoft.github.io/autogen/docs/tutorial/code-executors#assistant-agent)
+
+
 ### Basic Prompt Execution
 
 This example implements one agent, executes one prompt and prints the result. Ollama is used as LLM model host.
@@ -158,3 +174,15 @@ Human input is a way of interacting with agents based on asking the human to ent
 In `NEVER` mode human input is never requested. Agents act fully autonomous. In `TERMINATE` mode human input is only requested when a termination condition is met. When human replies in this mode, `max_consecutive_auto_reply` counter is reset. In `ALWAYS` mode human input is always requested. In this mode `max_consecutive_auto_reply` is ignored.
 
 [Human Input Modes Code Examples](/autogen-examples/3-human-input/)
+
+### Code Executors
+
+A code executor processes input messages containing code, executes the code, and outputs the results. AutoGEN offers two built-in executors: a command line executor for running code in environments like a UNIX shell and a Jupyter executor for interactive Jupyter kernels. Each executor can execute code locally on the host platform or within a Docker container. Local execution is suitable for development and testing, while Docker container execution is preferred for production to handle arbitrary code safely.
+
+> Executing LLM-generated code locally poses a security risk to your host environment.
+
+> The choice between command line and Jupyter code executor depends on the nature of the code blocks in agents’ conversation. If each code block is a “script” that does not use variables from previous code blocks, the command line code executor is a good choice. If some code blocks contain expensive computations (e.g., training a machine learning model and loading a large amount of data), and you want to keep the state in memory to avoid repeated computations, the Jupyter code executor is a better choice.
+>
+> --- [Command Line or Jupyter Code Executor?](https://microsoft.github.io/autogen/docs/tutorial/code-executors#command-line-or-jupyter-code-executor)
+
+[Code Executors Code Examples](/autogen-examples/4-code-executors/)
