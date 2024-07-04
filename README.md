@@ -181,8 +181,8 @@ A code executor processes input messages containing code, executes the code, and
 
 > Executing LLM-generated code locally poses a security risk to your host environment.
 
+[Code Executors Code Examples](/autogen-examples/4-code-executors/)
+
 > The choice between command line and Jupyter code executor depends on the nature of the code blocks in agents’ conversation. If each code block is a “script” that does not use variables from previous code blocks, the command line code executor is a good choice. If some code blocks contain expensive computations (e.g., training a machine learning model and loading a large amount of data), and you want to keep the state in memory to avoid repeated computations, the Jupyter code executor is a better choice.
 >
 > --- [Command Line or Jupyter Code Executor?](https://microsoft.github.io/autogen/docs/tutorial/code-executors#command-line-or-jupyter-code-executor)
-
-[Code Executors Code Examples](/autogen-examples/4-code-executors/)
