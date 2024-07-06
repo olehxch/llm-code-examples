@@ -8,6 +8,7 @@
 
 - [OpenAI and ChromaDB](#openai-and-chromadb)
 - [AutoGEN with Ollama](#autogen-with-ollama)
+- [Nvidia NIM](#nvidia-nim)
 
 ## OpenAI and ChromaDB
 
@@ -205,3 +206,40 @@ There are several [conversation patterns](https://microsoft.github.io/autogen/do
 4. [**Nested chat:**](https://microsoft.github.io/autogen/docs/tutorial/conversation-patterns#nested-chats) Embedding a workflow within a single agent for reuse in larger workflows.
 
 [Conversation Patterns Code Examples](/autogen-examples/6-conversation-patterns/)
+
+## Nvidia NIM
+
+> Instantly Deploy Generative AI With NVIDIA NIM
+> 
+> Explore the latest community-built AI models with an API optimized and accelerated by NVIDIA, then deploy anywhere with NVIDIA NIM inference microservices.
+>
+> Part of NVIDIA AI Enterprise, NVIDIA NIM is a set of easy-to-use inference microservices for accelerating the deployment of foundation models on any cloud or data center and helping to keep your data secure.
+>
+> --- [Nvidia AI](https://www.nvidia.com/en-us/ai/)
+
+Nvidia provides APIs for accessing various LLMs, implement integrations. Nvidia NIM inference microservice API is compatible with OpenAI API.
+
+[NVIDIA NIM Offers Optimized Inference Microservices for Deploying AI Models at Scale](https://developer.nvidia.com/blog/nvidia-nim-offers-optimized-inference-microservices-for-deploying-ai-models-at-scale/)
+
+[A list of Nvidia LLM models](https://docs.api.nvidia.com/nim/reference/nvidia-nemotron-4-340b-reward)
+
+Before using these code examples please create `.env` file inside each folder. For these examples please use Nvidia API Key generated from the main page.
+
+```
+OPENAI_API_KEY=<YOUR_KEY>
+```
+
+### Basic Prompt Execution
+
+Here are basic examples of prompt execution with and without response streaming. 
+Nvidia NIM APIs are the same as in OpenAI.
+
+[Basic Prompt Execution Code Examples](/nvidia-examples/0-basic-prompt-execution/)
+
+
+### Code Generation
+
+Here are some examples of prompt execution that generates source code in Python and JavaScript languages.
+
+[Code Generation Code Examples](/nvidia-examples/1-code-generation/)
+
