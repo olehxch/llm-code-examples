@@ -6,11 +6,11 @@
 
 ## Table of Contents
 
-- [OpenAI and ChromaDB](#openai-and-chromadb)
+- [OpenAI with ChromaDB](#openai-with-chromadb)
 - [AutoGEN with Ollama](#autogen-with-ollama)
 - [Nvidia NIM](#nvidia-nim)
 
-## OpenAI and ChromaDB
+## OpenAI with ChromaDB
 
 These examples covered from an awesome book on developing applications based on LLMs titled *"Large Language Models at Work: Enhancing Software Systems with Language Models"*. This book covers many development topics and usage cases. Most of the code examples are provided in the next sections.
 
