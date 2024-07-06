@@ -6,12 +6,12 @@
 
 ## Table of Contents
 
-- [Large Language Models at Work: Enhancing Software Systems with Language Models](#large-language-models-at-work-enhancing-software-systems-with-language-models)
+- [OpenAI and ChromaDB](#openai-and-chromadb)
 - [AutoGEN with Ollama](#autogen-with-ollama)
 
-## Large Language Models at Work: Enhancing Software Systems with Language Models
+## OpenAI and ChromaDB
 
-This is an awesome book on developing applications based on LLMs. This book covers many development topics and usage cases. Most of the code examples are provided in the next sections.
+These examples covered from an awesome book on developing applications based on LLMs titled *"Large Language Models at Work: Enhancing Software Systems with Language Models"*. This book covers many development topics and usage cases. Most of the code examples are provided in the next sections.
 
 [Large Language Models at Work: Enhancing Software Systems with Language Models by Vlad Rișcuția](https://vladris.com/llm-book)
 
@@ -71,6 +71,8 @@ Embeddings are high-dimensional vector representations of words, phrases, or doc
 
 Vector databases are specialized databases designed to store, index, and query high-dimensional vectors efficiently. These vectors often represent complex data types such as images, text, or embeddings from machine learning models. Vector databases enable rapid similarity searches, making them ideal for applications in recommendation systems, natural language processing, image retrieval, and more.
 
+[Chromadb](https://www.trychroma.com) is used for storing text embeddings.
+
 [Vector Database Code Examples](/llm-book-examples/7-vector-database/)
 
 ### Function Calling
@@ -82,6 +84,8 @@ Function calling for Large Language Models refers to the capability of these mod
 ### Function Libraries inside Vector Database
 
 To handle token limits efficiently, we use memory by storing all available functions in a vector database indexed by description embeddings. Instead of including all functions in a completion call, we select a subset of the most relevant functions based on the user's request. Relevance is determined by measuring the cosine distance between embeddings, ensuring that only the necessary functions are used, optimizing performance and reducing token consumption.
+
+[Chromadb](https://www.trychroma.com) is used for storing function embeddings.
 
 [Function Libraries inside Vector Database Code Examples](/llm-book-examples/9-functions-vector-database/)
 
