@@ -271,3 +271,14 @@ model that translates images of plots into tables.
 - [fuyu-8b](https://build.nvidia.com/adept/fuyu-8b/modelcard) is a multi-modal model for a wide range of tasks, including image understanding and language generation.
 
 [Recognize Content in Images Code Examples](/nvidia-examples/1-code-generation/)
+
+### Generate High-Quality Embeddings
+
+Here are some examples with models that generate embeddings used for the data retrieval and similarity search.
+
+- [bge-m3](https://build.nvidia.com/baai/bge-m3/modelcard) is an embedding model for text retrieval tasks, excelling in dense, multi-vector, and sparse retrieval.
+- [embed-qa-4](https://build.nvidia.com/nvidia/embed-qa-4/modelcard) is a GPU-accelerated generation of text embeddings used for question-answering retrieval.
+- [nv-embed-v1](https://build.nvidia.com/nvidia/nv-embed-v1/modelcard) generates high-quality numerical embeddings from text inputs.
+- [rerank-qa-mistral-4b](https://build.nvidia.com/nvidia/rerank-qa-mistral-4b/modelcard) is a GPU-accelerated model optimized for providing a probability score that a given passage contains the information to answer a question.
+- [arctic-embed-l](https://build.nvidia.com/snowflake/arctic-embed-l/modelcard) is a GPU-accelerated generation of text embeddings.
+
