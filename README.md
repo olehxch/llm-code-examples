@@ -229,17 +229,45 @@ Before using these code examples please create `.env` file inside each folder. F
 OPENAI_API_KEY=<YOUR_KEY>
 ```
 
-### Basic Prompt Execution
+### Reasoning and Text Generation
 
 Here are basic examples of prompt execution with and without response streaming. 
 Nvidia NIM APIs are the same as in OpenAI.
+
+- [llama3-70b-instruct](https://build.nvidia.com/meta/llama3-70b/modelcard) powers complex conversations with superior contextual understanding, reasoning and text generation.
+- [mixtral-8x7b-instruct-v0.1](https://build.nvidia.com/mistralai/mixtral-8x7b-instruct/modelcard) is an MOE LLM that follows instructions, completes requests, and generates creative text.
+- [mistral-large](https://build.nvidia.com/mistralai/mistral-large/modelcard) excels in complex multilingual reasoning tasks, including text understanding, and code generation.
+- [gemma-2-27b-it](https://build.nvidia.com/google/gemma-2-27b-it/modelcard) is a cutting-edge text generation model text understanding, transformation, and code generation.
+- [phi-3-mini-128k-instruct](https://build.nvidia.com/microsoft/phi-3-mini/modelcard) is lightweight, state-of-the-art open LLM with strong math and logical reasoning skills.
+- [solar-10.7b-instruct](https://build.nvidia.com/upstage/solar-10_7b-instruct/modelcard) excels in NLP tasks, particularly in instruction-following, reasoning, and mathematics.
 
 [Basic Prompt Execution Code Examples](/nvidia-examples/0-basic-prompt-execution/)
 
 
 ### Code Generation
 
-Here are some examples of prompt execution that generates source code in Python and JavaScript languages.
+Here are some examples of prompt execution that generates source code in Python and JavaScript languages. 
+
+- [starcoder2-15b](https://build.nvidia.com/bigcode/starcoder2-15b) is an advanced programming model for code completion, summarization, and generation
+- [codestral-22b-instruct-v0.1](https://build.nvidia.com/mistralai/codestral-22b-instruct-v01/modelcard) is a model for writing and interacting with code across a wide range of programming languages and tasks.
+- [granite-34b-code-instruct](https://build.nvidia.com/ibm/granite-34b-code-instruct/modelcard) is a software programming LLM for code generation, completion, explanation, and multi-turn conversion.
+- [codegemma-1.1-7b](https://build.nvidia.com/google/codegemma-1-1-7b/modelcard) is an advanced programming model for code generation, completion, reasoning, and instruction following.
+- [deepseek-coder-6.7b-instruct](https://build.nvidia.com/deepseek-ai/deepseek-coder-6_7b-instruct/modelcard) is a powerful coding model offering advanced capabilities in code generation, completion, and infilling.
+- [codellama-70b](https://build.nvidia.com/meta/codellama-70b/modelcard) is an LLM capable of generating code from natural language and vice versa.
+- [arctic](https://build.nvidia.com/snowflake/arctic/modelcard) delivers high efficiency inference for enterprise applications focused on SQL generation and coding.
+- [nemotron-4-340b-instruct](https://build.nvidia.com/nvidia/nemotron-4-340b-instruct/modelcard) creates diverse synthetic data that mimics the characteristics of real-world data.
 
 [Code Generation Code Examples](/nvidia-examples/1-code-generation/)
 
+
+### Recognize Content in Images with Vision Models
+
+Here are some examples of recognizing the content in the images.
+
+- [Kosmos-2](https://build.nvidia.com/microsoft/microsoft-kosmos-2/modelcard) model is a groundbreaking multimodal model designed to understand and reason about visual elements in images.
+- [neva-22b](https://build.nvidia.com/nvidia/neva-22b/modelcard) is a multi-modal vision-language model that understands text/images and generates informative responses
+- [deplot](https://build.nvidia.com/google/google-deplot/modelcard) is a one-shot visual language understanding 
+model that translates images of plots into tables.
+- [fuyu-8b](https://build.nvidia.com/adept/fuyu-8b/modelcard) is a multi-modal model for a wide range of tasks, including image understanding and language generation.
+
+[Recognize Content in Images Code Examples](/nvidia-examples/1-code-generation/)
