@@ -269,6 +269,7 @@ Here are some examples of recognizing the content in the images.
 - [deplot](https://build.nvidia.com/google/google-deplot/modelcard) is a one-shot visual language understanding 
 model that translates images of plots into tables.
 - [fuyu-8b](https://build.nvidia.com/adept/fuyu-8b/modelcard) is a multi-modal model for a wide range of tasks, including image understanding and language generation.
+- [llava-v1.6-34b](https://build.nvidia.com/liuhaotian/llava16-34b/modelcard) is a multi-modal vision-language model that understands text/images and generates informative responses.
 
 [Recognize Content in Images Code Examples](/nvidia-examples/1-code-generation/)
 
