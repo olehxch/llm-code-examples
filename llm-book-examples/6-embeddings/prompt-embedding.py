@@ -70,7 +70,7 @@ while True:
     print('Found nearest chapter:', nearest_embedding_key)
 
     chat_completion = client.chat.completions.create(
-        model='gpt-4o',
+        model='gpt-4o-mini',
         messages=[
             {'role': 'system', 'content': 'You are a Q&A AI.'},
             {'role': 'system', 'content': 'Here are some facts that can help you answer the following question: ' + chapter_text},

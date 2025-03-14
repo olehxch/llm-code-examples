@@ -14,7 +14,7 @@ def imaginary_fact():
     # Provide an imaginary fact and check the hallucinated response
 
     chat_completion = client.chat.completions.create(
-        model='gpt-4o',
+        model='gpt-4o-mini',
         messages=[
             {'role': 'user', 'content': 'Tell me more about razor sword fish inside the ocean.'},
         ],
@@ -37,7 +37,7 @@ def limit_fake_facts():
     '''
 
     chat_completion = client.chat.completions.create(
-        model='gpt-4o',
+        model='gpt-4o-mini',
         messages=[
             {'role': 'user', 'content': guide +
                 'Tell me more about razor sword fish inside the ocean.'},
@@ -55,7 +55,7 @@ def incorrect_math():
     # Example with incorrect math calculation
 
     chat_completion = client.chat.completions.create(
-        model='gpt-4o',
+        model='gpt-4o-mini',
         messages=[
             {'role': 'user', 'content': 'What are the last five Fibonacci numbers starting from 1000000000000 Fibonacci number?'},
         ],
@@ -72,7 +72,7 @@ def incorrect_calculation():
     # Example with incorrect math calculation
 
     chat_completion = client.chat.completions.create(
-        model='gpt-4o',
+        model='gpt-4o-mini',
         messages=[
             {'role': 'user', 'content': 'How many times does the letter "e" show up in the days of the week?'},
         ],
@@ -89,7 +89,7 @@ def python_code_for_calculation():
     # Example with Python code generation from LLM
 
     chat_completion = client.chat.completions.create(
-        model='gpt-4o',
+        model='gpt-4o-mini',
         messages=[
             {'role': 'user', 'content': 'Provide a python code for the task: How many times does the letter "e" show up in the days of the week?.'},
         ],
@@ -120,7 +120,7 @@ def incorrect_python_code_execution():
     print(f"The letter 'e' appears {e_count} times in the days of the week.")
     '''
     chat_completion = client.chat.completions.create(
-        model='gpt-4o',
+        model='gpt-4o-mini',
         messages=[
             {'role': 'user', 'content': 'Execute provided Python code and show the result: ' + code},
         ],

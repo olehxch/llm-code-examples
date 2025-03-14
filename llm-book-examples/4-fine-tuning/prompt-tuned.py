@@ -42,4 +42,5 @@ chat_completion = client.chat.completions.create(
     seed=42
 )
 
+print('\n')
 print('Chat Completion Message:', chat_completion.choices[0].message)

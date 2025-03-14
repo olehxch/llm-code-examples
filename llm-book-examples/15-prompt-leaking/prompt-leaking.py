@@ -18,7 +18,7 @@ def prompt_leaking():
     """
 
     chat_completion = client.chat.completions.create(
-        model='gpt-4o',
+        model='gpt-4o-mini',
         messages=[
             {"role": "system", "content": "You are an English to French translator."},
             {"role": "user", "content": "Translate this to French: " + leak}

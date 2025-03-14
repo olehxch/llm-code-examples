@@ -22,7 +22,7 @@ def content_filter():
     ]
 
     chat_completion = client.chat.completions.create(
-        model='gpt-4o',
+        model='gpt-4o-mini',
         messages=messages,
         max_tokens=500,
         temperature=0.1,
@@ -47,7 +47,7 @@ def allowed_content():
     ]
 
     chat_completion = client.chat.completions.create(
-        model='gpt-4o',
+        model='gpt-4o-mini',
         messages=messages,
         max_tokens=500,
         temperature=0.1,
@@ -58,7 +58,7 @@ def allowed_content():
         print('I am not at liberty to discuss this topic.')
     else:
         allowed_chat_completion = client.chat.completions.create(
-            model='gpt-4o',
+            model='gpt-4o-mini',
             messages=[{'role': 'user', 'content': prompt}],
             max_tokens=500,
             temperature=0.1,
@@ -80,7 +80,7 @@ def bypass_content_policy():
     ]
 
     chat_completion = client.chat.completions.create(
-        model='gpt-4o',
+        model='gpt-4o-mini',
         messages=messages,
         max_tokens=500,
         temperature=0.1,
@@ -91,7 +91,7 @@ def bypass_content_policy():
         print('I am not at liberty to discuss this topic.')
     else:
         allowed_chat_completion = client.chat.completions.create(
-            model='gpt-4o',
+            model='gpt-4o-mini',
             messages=[{'role': 'user', 'content': prompt}],
             max_tokens=500,
             temperature=0.1,

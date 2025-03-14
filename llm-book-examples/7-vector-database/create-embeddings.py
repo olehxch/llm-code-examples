@@ -21,7 +21,7 @@ def get_embedding(text):
 
 embeddings = {}
 
-with open('data.txt', 'r') as f:
+with open('./llm-book-examples/7-vector-database/data.txt', 'r') as f:
     sum = f.read()
     chapters = sum.split('\n\n')
 

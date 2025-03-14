@@ -3,7 +3,7 @@ import tiktoken
 import numpy as np
 from collections import defaultdict
 
-data_path = 'dataset.jsonl'
+data_path = './llm-book-examples/4-fine-tuning/dataset.jsonl'
 
 # Load the dataset
 with open(data_path, 'r', encoding='utf-8') as f:

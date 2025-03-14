@@ -1,0 +1,13 @@
+[project]
+name = "llm-code-examples"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "autogen>=0.8.1",
+    "chromadb>=0.6.3",
+    "dotenv>=0.9.9",
+    "numpy>=2.2.3",
+    "openai>=1.66.3",
+]

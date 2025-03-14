@@ -10,7 +10,7 @@ OPENAI_ORG_ID = os.getenv('OPENAI_ORG_ID')
 client = OpenAI()
 
 # 1. Parse the 'memory.txt' file and store the key-value pairs in a dictionary
-with open('memory.txt', 'r') as f:
+with open('./llm-book-examples/5-memory/memory.txt', 'r') as f:
     content = f.read().split('\n\n')
 
 books = {}
@@ -46,7 +46,7 @@ while True:
     messages.append({'role': 'user', 'content': prompt})
 
     chat_completion = client.chat.completions.create(
-        model='gpt-4o',
+        model='gpt-4o-mini',
         messages=messages,
         temperature=0.1,
         seed=42

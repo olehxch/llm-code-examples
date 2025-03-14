@@ -6,7 +6,7 @@ import chromadb
 from chromadb.utils import embedding_functions
 
 # Get the API key and organization ID from the environment
-load_dotenv()
+load_dotenv(override=True)
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 OPENAI_ORG_ID = os.getenv('OPENAI_ORG_ID')
 
@@ -35,7 +35,13 @@ functions = {
 # Initialize the database
 chroma_client = chromadb.PersistentClient('db')
 
-chroma_client.delete_collection('functions')
+list_collections = chroma_client.list_collections()
+print('List collections', list_collections)
+
+if 'functions' in list_collections:
+    print('Deleting functions collection')
+    chroma_client.delete_collection('functions')
+
 collection = chroma_client.get_or_create_collection(
     'functions',
     embedding_function=embedding_functions.OpenAIEmbeddingFunction(
@@ -44,7 +50,7 @@ collection = chroma_client.get_or_create_collection(
     ))
 
 # Create embedding for the function description
-with open('get_weather.json', 'r') as f:
+with open('./llm-book-examples/9-functions-vector-database/get_weather.json', 'r') as f:
     function = json.load(f)
     function_str = json.dumps(function)
 
@@ -76,7 +82,7 @@ while True:
     print('Found function:', fns)
 
     chat_completion = client.chat.completions.create(
-        model='gpt-4o',
+        model='gpt-4o-mini-mini',
         messages=[
             {'role': 'user', 'content': prompt}
         ],
@@ -110,7 +116,7 @@ while True:
 
     # Pass back the results of the function call
     chat_completion2 = client.chat.completions.create(
-        model='gpt-4o',
+        model='gpt-4o-mini',
         messages=[
             {'role': 'user', 'content': prompt},
             {'role': 'function', 'name': function_name, 'content': fn_result},

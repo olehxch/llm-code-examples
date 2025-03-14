@@ -12,7 +12,7 @@ client = OpenAI()
 
 def asking_for_reference():
     chat_completion = client.chat.completions.create(
-        model='gpt-4o',
+        model='gpt-4o-mini',
         messages=[
             {'role': 'user', 'content': 'Tell me more about razor sword fish inside the ocean. Provide all references.'},
         ],
@@ -28,7 +28,7 @@ def calculate_letters():
     # Example with incorrect math calculation
 
     chat_completion = client.chat.completions.create(
-        model='gpt-4o',
+        model='gpt-4o-mini',
         messages=[
             {'role': 'user', 'content': 'How many times does the letter "e" show up in the days of the week? Think step by step.'},
         ],

@@ -50,7 +50,7 @@ for i, step in enumerate(plan):
     print('Prompt', prompt)
 
     chat_completion = client.chat.completions.create(
-        model='gpt-4o',
+        model='gpt-4o-mini',
         messages=prompt,
         temperature=0.1,
         seed=42

@@ -23,7 +23,7 @@ dataset_file = find_file_by_name(files)
 
 if (dataset_file is None):
     dataset_file = client.files.create(
-        file=open('dataset.jsonl', 'rb'),
+        file=open('./llm-book-examples/4-fine-tuning/dataset.jsonl', 'rb'),
         purpose='fine-tune'
     )
 

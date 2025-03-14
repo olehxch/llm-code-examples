@@ -12,7 +12,13 @@ OPENAI_ORG_ID = os.getenv('OPENAI_ORG_ID')
 client = OpenAI()
 chroma_client = chromadb.PersistentClient('db')
 
-chroma_client.delete_collection('stories')
+list_collections = chroma_client.list_collections()
+print('List collections', list_collections)
+
+if 'stories' in list_collections:
+    print('Deleting stories collection')
+    chroma_client.delete_collection('stories')
+
 collection = chroma_client.get_or_create_collection(
     'stories',
     embedding_function=embedding_functions.OpenAIEmbeddingFunction(
@@ -20,7 +26,7 @@ collection = chroma_client.get_or_create_collection(
         model_name="text-embedding-ada-002"
     ))
 
-with open('data.txt', 'r') as f:
+with open('./llm-book-examples/7-vector-database/data.txt', 'r') as f:
     sum = f.read()
     chapters = sum.split('\n\n')
 
@@ -46,7 +52,7 @@ while True:
     print('Found nearest chapter:', chapter_text)
 
     chat_completion = client.chat.completions.create(
-        model='gpt-4o',
+        model='gpt-4o-mini',
         messages=[
             {'role': 'system', 'content': 'You are a Q&A AI.'},
             {'role': 'system', 'content': 'Here are some facts that can help you answer the following question: ' + chapter_text},

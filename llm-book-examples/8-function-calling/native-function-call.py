@@ -1,4 +1,3 @@
-from ast import arguments
 import os
 import json
 from openai import OpenAI
@@ -24,7 +23,7 @@ functions = {
 }
 
 chat_completion = client.chat.completions.create(
-    model='gpt-4o',
+    model='gpt-4o-mini',
     messages=[
         {'role': 'user', 'content': 'What is the weather like today in Tokyo?'}
     ],
@@ -64,7 +63,7 @@ fn_result = functions[function_name](city)
 
 # Pass back the results of the function call
 chat_completion2 = client.chat.completions.create(
-    model='gpt-4o',
+    model='gpt-4o-mini',
     messages=[
         {'role': 'user', 'content': 'What is the weather like today in Tokyo?'},
         {'role': 'function', 'name': function_name, 'content': fn_result},

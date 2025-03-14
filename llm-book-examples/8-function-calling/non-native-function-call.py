@@ -24,7 +24,7 @@ functions = {
 }
 
 chat_completion = client.chat.completions.create(
-    model='gpt-4o',
+    model='gpt-4o-mini',
     messages=[
         # system message with a function description
         {"role": "system", "content": "You are an AI personal assistant. You can call external functions to accomplish tasks or get more information. To call an external function, your respond is only JSON. The return value of the function will be made available to you. Only call the functions described next:"},
