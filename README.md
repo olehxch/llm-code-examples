@@ -2,7 +2,13 @@
 
 🚀 This repository contains various code examples with methods and approaches to work with LLMs from my learning and personal experience.
 
-🎓 You are free to use these code examples for educational or work purposes. Please credit all book and supplementary material authors if you use their code examples, figures, pictures or citations.
+🎓 You can use these code examples for educational or work purposes. Please credit all book and supplementary material authors if you use their code examples, figures, pictures, text, or citations.
+
+⚡️ You can subscribe to my Medium account to read articles about artificial intelligence, cloud computing, state-of-the-art technologies, and also audio engineering! Here is a link:
+
+[My Articles on Medium](https://medium.com/@olehch)
+
+🙌 This collection was created by Oleh Chaplia and is constantly updated.
 
 ## Table of Contents
 
