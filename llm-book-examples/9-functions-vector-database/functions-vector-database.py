@@ -82,7 +82,7 @@ while True:
     print('Found function:', fns)
 
     chat_completion = client.chat.completions.create(
-        model='gpt-4o-mini-mini',
+        model='gpt-4o-mini',
         messages=[
             {'role': 'user', 'content': prompt}
         ],

@@ -14,7 +14,7 @@ OPENAI_ORG_ID = os.getenv('OPENAI_ORG_ID')
 
 client = OpenAI()
 
-embeddings = json.load(open('embeddings.json', 'r'))
+embeddings = json.load(open('./llm-book-examples/6-embeddings/embeddings.json', 'r'))
 
 
 def get_embedding(text):
@@ -44,7 +44,7 @@ def nearest_embedding(embedding):
 def find_chapter_by_key(key):
     local_embeddings = {}
 
-    with open('data.txt', 'r') as f:
+    with open('./llm-book-examples/6-embeddings/data.txt', 'r') as f:
         sum = f.read()
         chapters = sum.split('\n\n')
 

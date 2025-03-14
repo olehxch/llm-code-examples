@@ -16,6 +16,23 @@
 - [AutoGEN with Ollama](#autogen-with-ollama)
 - [Nvidia NIM](#nvidia-nim)
 
+## Requirements
+
+Install `Python 3.12` and the `uv` package manager.
+
+- [Python 3.12](https://www.python.org/downloads/release/python-3120)
+- [uv package manager](https://github.com/astral-sh/uv)
+
+Open the [`uv` installation guide](https://docs.astral.sh/uv/getting-started/installation/) and install the package manager.
+Use the project root folder as the root for executing python files. 
+
+After the installation of the `uv`, install all dependencies:
+
+```bash
+uv sync
+```
+
+
 ## OpenAI with ChromaDB
 
 These examples covered from an awesome book on developing applications based on LLMs titled *"Large Language Models at Work: Enhancing Software Systems with Language Models"*. This book covers many development topics and usage cases. Most of the code examples are provided in the next sections.

@@ -10,7 +10,7 @@ OPENAI_ORG_ID = os.getenv('OPENAI_ORG_ID')
 client = OpenAI()
 
 chat_completion = client.chat.completions.create(
-    model='gpt-4o-mini-mini',
+    model='gpt-4o-mini',
     messages=[
         {'role': 'system', 'content': 'You are helpful math assistant.'},
         {

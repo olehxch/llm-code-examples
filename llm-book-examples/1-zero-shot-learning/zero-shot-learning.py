@@ -10,9 +10,9 @@ OPENAI_ORG_ID = os.getenv('OPENAI_ORG_ID')
 client = OpenAI()
 
 chat_completion = client.chat.completions.create(
-    model='gpt-4o-mini-mini',
+    model='gpt-4o-mini',
     messages=[
-        {'role': 'system', 'content': 'You are an English to Ukrainian translator.'},
+        {'role': 'system', 'content': 'You are an English to Polish translator.'},
         {'role': 'user', 'content': 'Translate this to Polish: Hi, how are you?'}
     ],
     temperature=0.0,

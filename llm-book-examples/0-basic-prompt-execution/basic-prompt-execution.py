@@ -10,12 +10,12 @@ OPENAI_ORG_ID = os.getenv('OPENAI_ORG_ID')
 client = OpenAI()
 
 chat_completion = client.chat.completions.create(
-    model='gpt-4o-mini-mini',
+    model='gpt-4o-mini',
     messages=[
         {'role': 'system', 'content': 'You are a helpful assistant.'},
-        {'role': 'user', 'content': 'Hello!'}
+        {'role': 'user', 'content': 'Hello! Could you add some details about quantum mechanics?'}
     ],
-    temperature=0.0,
+    temperature=1.0,
     top_p=1.0,
     max_tokens=4096,
     stop=['\n'],
